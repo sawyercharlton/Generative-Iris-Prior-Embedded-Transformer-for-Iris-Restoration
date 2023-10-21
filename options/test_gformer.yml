@@ -1,0 +1,75 @@
+# general settings
+name: test_gformer_91336
+model_type: GformerModel
+num_gpu: auto
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  # Please modify accordingly to use your own validation
+  # Or comment the val block if do not need validation during training
+  test_1:
+    name: validation
+    type: PairedImageDataset
+    dataroot_lq: /hy-tmp/mixing256/test/cubic
+    dataroot_gt: /hy-tmp/mixing256/test/target
+    io_backend:
+      type: disk
+    mean: [0.5, 0.5, 0.5]
+    std: [0.5, 0.5, 0.5]
+    scale: 1
+
+# network structures
+network_g:
+  type: Gformer
+  out_size: 256
+  num_style_feat: 512
+  channel_multiplier: 1
+  resample_kernel: [1, 3, 3, 1]
+  decoder_load_path: experiments/pretrained_models/990000_v2.pt
+  fix_decoder: true
+  num_mlp: 8
+  lr_mlp: 0.01
+  input_is_latent: true
+  different_w: true
+  narrow: 1
+  sft_half: true
+
+# path
+path:
+  pretrain_network_g: ../experiments/train_Gformer/models/net_g_91336.pth
+  param_key_g: params_ema
+  strict_load_g: true
+  pretrain_network_d: ~
+  resume_state: ../experiments/train_Gformer/training_states/91336.state
+
+# validation settings
+val:
+  save_img: true
+  suffix: 91336  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim: # metric name
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+# logging settings
+logger:
+  print_freq: 500
+  save_checkpoint_freq: !!float 1631
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
+
+find_unused_parameters: true

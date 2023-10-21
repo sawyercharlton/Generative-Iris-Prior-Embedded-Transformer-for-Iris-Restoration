@@ -4,17 +4,17 @@
 
 - Overview of Gformer architecture. Gformer consists of Transformer encoder and generative iris prior embedded decoder. They are bridged by the iris feature modulator.
 <p align="center">
-<img src="/asset/gformer.pdf">
+<img src="/asset/Gformer.png">
 </p>
 
 - Qualitative comparison.
 <p align="center">
-<img src="/asset/comparison.pdf">
+<img src="/asset/Comparison.png">
 </p>
 
 - ROC curve for comparison.
 <p align="center">
-<img src="/asset/roc.pdf">
+<img src="/asset/roc.png">
 </p>
 
 ## Requirements
@@ -35,9 +35,9 @@ See `requirements.txt`
 
 ## Examples
 
-    ```bash
-    python src/train.py -opt options/train_gformer.yml --auto_resume
-    ```
+```bash
+python src/train.py -opt options/train_gformer.yml --auto_resume
+```
 ## BibTeX
 
 @InProceedings{huang2023gformer,

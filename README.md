@@ -30,6 +30,7 @@ pip install -r requirements.txt
 
 ## Instructions
  - Global hyperparameters are configured in `options/`
+ - Read README.md files in `experiments/`
 
 ## Examples
 

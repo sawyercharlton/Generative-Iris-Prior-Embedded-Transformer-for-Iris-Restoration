@@ -1,6 +1,6 @@
 # Generative Iris Prior Embedded Transformer for Iris Restoration
 
-[ICME 2023] This is an implementation of [Generative Iris Prior Embedded Transformer for Iris Restoration](https://sawyercharlton.github.io/home/files/Generative_Iris_Prior_Embedded_Transformer_for_Iris_Restoration.pdf)
+[ICME 2023] This is an implementation of [Generative Iris Prior Embedded Transformer for Iris Restoration](https://ieeexplore.ieee.org/document/10219618)
 
 - Overview of Gformer architecture. Gformer consists of Transformer encoder and generative iris prior embedded decoder. They are bridged by the iris feature modulator.
 <p align="center">

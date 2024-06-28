@@ -18,7 +18,7 @@ from torchvision.transforms import transforms
 
 @DATASET_REGISTRY.register()
 class MixingDegradationDataset(data.Dataset):
-    """FFHQ dataset for GFPGAN.
+    """Modified from FFHQ dataset for GFPGAN.
 
     It reads high resolution images, and then generate low-quality (LQ) images on-the-fly.
 

@@ -1,6 +1,6 @@
 # Generative Iris Prior Embedded Transformer for Iris Restoration
 
-[ICME 2023] This is an implementation of [Generative Iris Prior Embedded Transformer for Iris Restoration](https://ieeexplore.ieee.org/document/10219618)
+[ICME 2023] This is an implementation of [Generative Iris Prior Embedded Transformer for Iris Restoration](https://arxiv.org/abs/2407.00261)
 
 - Overview of Gformer architecture. Gformer consists of Transformer encoder and generative iris prior embedded decoder. They are bridged by the iris feature modulator.
 <p align="center">
@@ -19,7 +19,7 @@
 
 ## Requirements
 
-See `requirements.txt`
+ - See `requirements.txt`
 
 ### Installation
 
@@ -29,8 +29,8 @@ pip install -r requirements.txt
 ```
 
 ## Instructions
- - Global hyperparameters are configured in `options/`
- - Read README.md files in `experiments/`
+ - Global hyperparameters are configured in files under `options/`
+ - See README.md files under `experiments/`, there are some pretrained models to download.
 
 ## Examples
 
@@ -46,6 +46,6 @@ python src/train.py -opt options/train_gformer.yml --auto_resume
         year = {2023}
     }
 
-## :e-mail: Contact
+## Contact
 
 If you have any question, please email `yubo.huang@hotmail.com`.

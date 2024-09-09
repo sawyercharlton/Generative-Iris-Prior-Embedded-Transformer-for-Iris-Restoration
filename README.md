@@ -46,6 +46,5 @@ python src/train.py -opt options/train_gformer.yml --auto_resume
         year = {2023}
     }
 
-## Contact
-
-If you have any question, please email `yubo.huang@hotmail.com`.
+## Acknowledgement
+Yubo Huang, Jia Wang, Peipei Li, Liuyu Xiang, Peigang Li, Zhaofeng He
